@@ -64,6 +64,10 @@ class Personel(models.Model):
         return self.adi_soyadi
 
 # Create your models here.
+class Transaksi(models.Model):
+    deskripsi = models.TextField()
+    jumlah = models.DecimalField(max_digits=20, decimal_places=2)
+    dibuat = models.DateField(auto_now_add=True)
+    diubah = models.DateField(auto_now=True)
+    pemilik = models.ForeignKey('auth.User', null=False, on_delete=models.PROTECT)
 
-
-# Create your models here.
