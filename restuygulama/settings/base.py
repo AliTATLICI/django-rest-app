@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(i9#y#f^(u@-$n(@mq8()7j^ek35682is=ff0%br#r1k)8mo)x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -78,16 +78,6 @@ WSGI_APPLICATION = 'restuygulama.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ubys',
-        'USER': 'postgres',
-        'PASSWORD': 'ps123456',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
 
 
 # Password validation
@@ -130,6 +120,7 @@ STATIC_URL = '/static/'
 
 # Static for deployment
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # CORS Setting
 CORS_ORIGIN_ALLOW_ALL = True # development, for more check https://github.com/ottoyiu/django-cors-headers
