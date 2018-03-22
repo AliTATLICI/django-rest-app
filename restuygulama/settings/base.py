@@ -119,8 +119,8 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 # Static for deployment
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # CORS Setting
 CORS_ORIGIN_ALLOW_ALL = True # development, for more check https://github.com/ottoyiu/django-cors-headers
