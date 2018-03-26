@@ -40,6 +40,9 @@ class Bolum(models.Model):
 
     def __str__(self):
         return self.adi
+    class Meta:
+        verbose_name = 'Bölüm'
+        verbose_name_plural = 'Bölümler'
 
 class Ana_Bilim_Dali(models.Model):
 
@@ -47,6 +50,12 @@ class Ana_Bilim_Dali(models.Model):
     bolum=models.ForeignKey(Bolum, on_delete=models.PROTECT)
     adi=models.CharField(max_length=100)
     ing_adi=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.adi
+    class Meta:
+        verbose_name = 'Anabilim Dalı'
+        verbose_name_plural = 'Anabilim Dalları'
 
 class Personel(models.Model):
 
